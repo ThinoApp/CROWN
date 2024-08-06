@@ -1,0 +1,43 @@
+@use "/src/assets/global";
+.Cta {
+  @apply w-full min-h-[80vh] flex flex-row items-center gap-4 sticky bottom-0;
+  z-index: 0;
+  background-image: url("/assets/images/Cta-bg.png");
+  background-size: cover;
+  &::before {
+    content: "";
+    @apply w-full h-full block absolute top-0 left-0 bg-black opacity-50 -z-10;
+  }
+  .Cta-content {
+    @apply flex flex-col items-start gap-4;
+    h3 {
+      font-family: "MB Picture House One";
+      font-weight: bold;
+      font-size: 32px;
+      text-align: left;
+      color: #fff;
+    }
+    button {
+      @apply text-white duration-300;
+      font-family: "MB Picture House One";
+      font-weight: bold;
+      font-size: 18px;
+      text-align: left;
+      color: #fff;
+      background: linear-gradient(#fff, #fff);
+      background-size: 0% 5%;
+      background-repeat: no-repeat;
+      background-position: bottom left;
+
+      &:hover {
+        background-size: 100% 5%;
+      }
+      &:nth-of-type(2) {
+        @apply -translate-x-[10%];
+      }
+      &:nth-of-type(3) {
+        @apply -translate-x-[35%];
+      }
+    }
+  }
+}

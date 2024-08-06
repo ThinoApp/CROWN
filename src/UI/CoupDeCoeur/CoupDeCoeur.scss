@@ -1,0 +1,68 @@
+@use "/src/assets/global";
+
+.CoupDeCoeur {
+  @include global.paddingInline();
+  @apply relative bg-white z-10 min-h-screen py-20;
+  @apply flex flex-col items-center gap-20;
+  h2 {
+    @apply pb-8;
+    font-family: "CaslonGraD ☞";
+    font-weight: normal;
+    font-size: 33px;
+    text-align: center;
+    color: #6e5c43;
+    background: linear-gradient(#6e5c43, #6e5c43);
+    background-size: 20% 2%;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+  }
+  .CoupDeCoeur-container {
+    @apply flex flex-col  w-full gap-8;
+    @apply sm:flex-row sm:gap-8;
+    .Card {
+      @apply flex flex-col items-center gap-2;
+      @apply w-full sm:w-1/2;
+      img {
+        @apply w-full h-full sm:h-[55vh] object-cover rounded-md mb-4;
+      }
+      h3 {
+        @apply uppercase;
+        font-family: Lato;
+        font-weight: normal;
+        font-size: 18px;
+        text-align: left;
+        color: #171717;
+      }
+      p {
+        font-family: Lato;
+        font-weight: normal;
+        font-size: 18px;
+        text-align: left;
+        color: #171717;
+      }
+
+      p.colors {
+        @apply flex flex-row flex-wrap justify-center items-center gap-4;
+        span {
+          @apply w-5 h-5 sm:w-4 sm:h-4 rounded-full flex items-center justify-center cursor-pointer;
+          &.active {
+            @apply w-6 h-6;
+            &::before {
+              content: "";
+              @apply w-5 h-5 block border-[4px] border-white;
+              @apply rounded-full;
+              background: inherit;
+            }
+          }
+        }
+      }
+      button {
+        @apply bg-[#282828] w-full text-center py-4 mt-2 rounded-sm;
+        font-family: Lato;
+        font-weight: normal;
+        font-size: 18px;
+        color: #fff;
+      }
+    }
+  }
+}
