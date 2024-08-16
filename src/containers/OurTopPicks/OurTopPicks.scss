@@ -1,0 +1,4 @@
+.OurTopPicks {
+  @apply relative flex flex-col items-center justify-center gap-5 bg-black;
+  @apply sm:flex-row sm:items-start sm:justify-start;
+}

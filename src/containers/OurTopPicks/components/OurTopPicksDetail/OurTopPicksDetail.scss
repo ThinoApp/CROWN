@@ -1,0 +1,29 @@
+.OurTopPicksDetail {
+  @apply w-full h-screen bg-fourth flex flex-col items-center justify-center gap-5 py-12 absolute top-0 duration-300;
+  @apply sm:flex-1 sm:relative;
+
+  .topPicksImage-container {
+    @apply w-3/4 relative h-full;
+    @apply sm:w-1/2;
+    img {
+      @apply w-full object-cover absolute top-0 left-0;
+    }
+  }
+  .topPicksTitle-container {
+    @apply relative w-full h-1/4;
+    h2 {
+      @apply text-3xl  text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-medium uppercase  text-primary;
+      @apply sm:font-medium sm:text-3xl;
+    }
+  }
+
+  p {
+    @apply font-medium text-primary  text-center;
+    @apply sm:font-normal sm:w-1/2 sm:text-xs sm:mt-4 sm:tracking-widest;
+  }
+
+  h3 {
+    @apply text-2xl  text-center font-medium uppercase  text-primary;
+    @apply sm:font-medium sm:text-3xl;
+  }
+}

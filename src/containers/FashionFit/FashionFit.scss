@@ -1,0 +1,27 @@
+.FashionFit {
+  @apply flex h-[50vh] flex-col items-center justify-center text-center relative gap-5;
+  background-image: url("/assets/images/FashionFit.jpg");
+  background-size: cover;
+  &::before {
+    @apply absolute inset-0 bg-fourth/85;
+    content: "";
+  }
+  h2 {
+    @apply text-5xl leading-[3rem] font-bold text-primary z-10;
+  }
+  .FashionFit-cta {
+    @apply flex items-center gap-2 px-5 py-3 rounded-full bg-primary uppercase text-fourth  z-10 relative  duration-500 font-bold text-lg;
+    width: calc(15ch);
+
+    &:hover {
+      width: calc(19ch);
+      .chevron-right-icon {
+        @apply opacity-100;
+      }
+    }
+    .chevron-right-icon {
+      width: 20px;
+      @apply opacity-0 absolute right-8 duration-300;
+    }
+  }
+}

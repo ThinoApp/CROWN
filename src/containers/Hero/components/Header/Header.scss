@@ -1,0 +1,16 @@
+@use "/src/assets/global";
+
+.Header {
+  @include global.paddingInline();
+  @apply absolute top-0 w-full flex justify-between items-center py-2 z-50;
+
+  .Header-logo {
+    @apply flex items-center gap-2 text-primary;
+    p {
+      @apply text-xl font-bold  uppercase;
+    }
+  }
+  .Header-menu {
+    @apply p-2 rounded-full bg-primary;
+  }
+}

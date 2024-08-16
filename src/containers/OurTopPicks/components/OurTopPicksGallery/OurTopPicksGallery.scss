@@ -1,0 +1,47 @@
+.OurTopPicksGallery {
+  @apply h-screen flex flex-col items-center justify-center gap-5 bg-black;
+  @apply sm:flex-1;
+  h2 {
+    @apply text-5xl leading-[3rem] text-center font-bold text-primary;
+    @apply sm:pt-12 sm:font-medium sm:text-5xl;
+  }
+
+  p {
+    @apply font-medium text-primary  text-center;
+    @apply sm:pb-12 sm:font-normal sm:text-xs sm:mt-4 sm:tracking-widest;
+  }
+
+  .OurTopPicksGalleryCarousel {
+    @apply w-full  h-[40vh] flex mt-24 items-start overflow-x-scroll  gap-0 scroll-smooth snap-x snap-mandatory;
+    .topPicksItem {
+      @apply min-h-[50%] w-1/3 object-cover;
+      @apply sm:h-[80%] sm:w-1/4 snap-center duration-200;
+      &:hover {
+        @apply cursor-pointer scale-110;
+      }
+      &:nth-child(odd) {
+        @apply self-end;
+      }
+    }
+    &::-webkit-scrollbar {
+      @apply hidden;
+    }
+  }
+
+  .OurTopPicksGallery-cta {
+    @apply flex items-center gap-2 px-5 py-3 rounded-full bg-primary uppercase text-fourth   relative  duration-500 font-bold text-lg;
+    @apply sm:text-xs;
+    width: calc(17ch);
+
+    &:hover {
+      width: calc(21ch);
+      .chevron-right-icon {
+        @apply opacity-100;
+      }
+    }
+    .chevron-right-icon {
+      width: 20px;
+      @apply opacity-0 absolute right-8 duration-300;
+    }
+  }
+}

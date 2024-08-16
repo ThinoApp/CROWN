@@ -1,0 +1,56 @@
+.TheBrands {
+  @apply flex flex-col items-center gap-2 bg-black py-8 h-screen;
+  h2 {
+    @apply text-5xl leading-[3rem] font-bold text-primary z-10;
+    @apply sm:pt-12 sm:font-medium sm:text-6xl;
+  }
+
+  p {
+    @apply font-medium text-primary z-10 text-center;
+    @apply sm:pb-12 sm:font-normal sm:text-xs sm:mt-4 sm:tracking-widest;
+  }
+
+  .TheBrands-list {
+    @apply grid grid-rows-2 grid-flow-col w-screen overflow-x-scroll scroll-smooth;
+    @apply sm:grid-rows-1 sm:grid-flow-col sm:w-full sm:h-fit;
+    scroll-snap-type: x proximity;
+    &::-webkit-scrollbar {
+      @apply hidden;
+    }
+    .TheBrands-list-item {
+      @apply relative border-[1px] border-fourth w-[50vw];
+      @apply sm:w-[25vw];
+      scroll-snap-align: start;
+      &::before {
+        @apply block absolute inset-0;
+        content: "";
+        background-image: linear-gradient(
+          to bottom,
+          rgba(#fff, 0.1),
+          rgba(#fff, 0.6)
+        );
+      }
+      &::after {
+        @apply block absolute inset-0 bg-gray-100/30;
+        content: "";
+      }
+      img {
+        @apply w-full h-full object-cover;
+      }
+      p {
+        @apply absolute bottom-0 left-0 right-0 font-bold text-fourth text-center py-2;
+        @apply sm:text-xl sm:py-1;
+      }
+    }
+  }
+}
+
+.TheBrands-control {
+  @apply flex items-center gap-4 mt-4;
+  button {
+    @apply text-primary w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center;
+    &:hover {
+      @apply bg-primary text-black;
+    }
+  }
+}

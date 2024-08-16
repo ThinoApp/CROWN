@@ -1,0 +1,24 @@
+@use "/src/assets/global";
+
+.MeetTheStylistsLeft {
+  @include global.paddingInline();
+  @apply flex flex-col justify-between relative py-4 h-[50vh];
+  @apply sm:flex-1 sm:h-screen sm:justify-around;
+
+  &::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full bg-black/75;
+  }
+  img {
+    @apply absolute bottom-0 left-0 w-full h-full object-cover -scale-x-100 opacity-15;
+  }
+
+  h2 {
+    @apply text-5xl text-primary z-10;
+    @apply sm:text-7xl sm:w-[10ch];
+  }
+  p {
+    @apply z-10 text-primary text-sm;
+    @apply sm:w-3/4 sm:text-justify sm:text-sm sm:leading-7;
+  }
+}

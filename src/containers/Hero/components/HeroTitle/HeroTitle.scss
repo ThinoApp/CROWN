@@ -1,0 +1,28 @@
+@use "/src/assets/global";
+
+.HeroTitle {
+  @apply h-screen flex flex-col justify-center items-center relative py-4 sm:flex-1;
+  @include global.paddingInline();
+  background-image: url("/src/assets/images/image_1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 60% 10%;
+  &::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full bg-fourth/75 backdrop-blur-sm;
+  }
+
+  h3 {
+    @apply uppercase font-medium  text-primary mt-auto mb-10 z-10;
+    @apply sm:text-sm;
+  }
+  h1 {
+    @apply mb-auto text-5xl uppercase text-center leading-10 font-semibold text-primary z-10;
+    @apply sm:text-7xl sm:leading-[4rem] sm:font-medium;
+  }
+
+  .HeroTitle-social-icon {
+    @apply flex gap-5 text-primary z-10;
+    @apply sm:self-start sm:gap-10;
+  }
+}

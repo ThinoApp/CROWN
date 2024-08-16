@@ -1,0 +1,53 @@
+@use "/src/assets/global";
+
+.HeroDescription {
+  @include global.paddingInline();
+  @apply h-screen flex flex-col items-center justify-center relative py-4 sm:flex-1;
+  background-image: url("/src/assets/images/image_2.jpg");
+  background-size: cover;
+  &::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-full bg-fourth/75;
+  }
+  &::after {
+    content: "";
+    @apply absolute bottom-0 w-full h-1/2  block;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(#27241d, 0) 10%,
+      rgba(#000, 1)
+    );
+  }
+
+  .HeroDescription-text {
+    @apply uppercase font-medium text-center text-primary mt-auto mb-10 z-10;
+    @apply sm:w-1/2 sm:text-sm sm:font-normal sm:leading-5;
+  }
+  .HeroDescription-cta {
+    @apply flex items-center gap-2 px-5 py-3 rounded-full bg-fourth/75 uppercase text-primary mb-auto z-10 relative  duration-500;
+    width: calc(15ch);
+
+    &:hover {
+      width: calc(19ch);
+      .chevron-right-icon {
+        @apply opacity-100;
+      }
+    }
+    .chevron-right-icon {
+      width: 20px;
+      @apply opacity-0 absolute  right-8 duration-300;
+    }
+  }
+
+  .scrollMoreBtn {
+    @apply text-primary uppercase z-10 duration-300;
+    @apply sm:text-sm;
+    background-image: linear-gradient(#c3c0a2, #c3c0a2);
+    background-repeat: no-repeat;
+    background-size: 0% 10%;
+    background-position: bottom;
+    &:hover {
+      background-size: 100% 10%;
+    }
+  }
+}

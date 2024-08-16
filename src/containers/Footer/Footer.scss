@@ -1,0 +1,38 @@
+@use "/src/assets/global";
+.Footer {
+  @include global.paddingInline();
+  @apply flex flex-col bg-third py-8 gap-4;
+  @apply sm:flex-row sm:justify-between;
+  .Footer-copyright {
+    @apply flex flex-col justify-between items-start gap-4;
+    .copyright {
+      @apply text-primary text-center;
+      @apply sm:text-xs;
+    }
+  }
+
+  .Footer-links {
+    @apply grid grid-cols-1 grid-flow-row items-start gap-3;
+    @apply sm:grid-cols-2;
+    a {
+      @apply text-primary py-1 duration-300 bg-left-bottom;
+      @apply sm:text-center sm:text-xs sm:bg-bottom-center;
+      background-image: linear-gradient(to bottom, #c3c0a2, #c3c0a2);
+      background-repeat: no-repeat;
+      background-size: 0% 0.1em;
+
+      &:hover {
+        background-size: 100% 0.1em;
+      }
+    }
+  }
+  .Footer-logo {
+    @apply flex items-center gap-2 text-primary;
+    .icon {
+      @apply w-12 h-12;
+    }
+    p {
+      @apply text-3xl font-bold  uppercase;
+    }
+  }
+}
