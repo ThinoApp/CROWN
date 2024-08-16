@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./MeetTheStylistsCaroussel.scss";
 import { motion } from "framer-motion";
+import { baseUrl } from "@/config";
 const MeetTheStylistsCaroussel = () => {
   const [active, setActive] = useState(0);
   return (
@@ -23,7 +24,7 @@ const MeetTheStylistsCaroussel = () => {
           onClick={() => setActive(item)}
         >
           <motion.img
-            src="/assets/images/CDC_1.png"
+            src={`${baseUrl}/assets/images/CDC_1.png`}
             animate={{
               boxShadow:
                 active === item

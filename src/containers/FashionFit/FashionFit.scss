@@ -1,6 +1,6 @@
 .FashionFit {
   @apply flex h-[50vh] flex-col items-center justify-center text-center relative gap-5;
-  background-image: url("/assets/images/FashionFit.jpg");
+  background-image: url("/CROWN/assets/images/FashionFit.jpg");
   background-size: cover;
   &::before {
     @apply absolute inset-0 bg-fourth/85;

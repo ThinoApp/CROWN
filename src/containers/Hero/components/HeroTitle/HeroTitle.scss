@@ -3,7 +3,7 @@
 .HeroTitle {
   @apply h-screen flex flex-col justify-center items-center relative py-4 sm:flex-1;
   @include global.paddingInline();
-  background-image: url("/src/assets/images/image_1.jpg");
+  background-image: url("/CROWN/assets/images/image_1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 60% 10%;

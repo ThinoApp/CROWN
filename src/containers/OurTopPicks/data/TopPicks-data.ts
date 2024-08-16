@@ -1,10 +1,12 @@
+import { baseUrl } from "../../../config";
+
 export const topPicksData = [
   {
     id: 1,
     title: "The Best of Both Worlds",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.",
-    image: "/assets/images/CDC_1.png",
+    image: `${baseUrl}/assets/images/CDC_1.png`,
     price: 2500,
   },
   {
@@ -12,7 +14,7 @@ export const topPicksData = [
     title: "FORMAL DRESS",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.",
-    image: "/assets/images/CDC_2.png",
+    image: `${baseUrl}/assets/images/CDC_2.png`,
     price: 2575,
   },
   {
@@ -20,7 +22,7 @@ export const topPicksData = [
     title: "Another Titlte Here",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.",
-    image: "/assets/images/CDC_3.png",
+    image: `${baseUrl}/assets/images/CDC_3.png`,
     price: 1700,
   },
   {
@@ -28,7 +30,7 @@ export const topPicksData = [
     title: "Generated title",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.",
-    image: "/assets/images/CDC_4.png",
+    image: `${baseUrl}/assets/images/CDC_4.png`,
     price: 550,
   },
   {
@@ -36,7 +38,7 @@ export const topPicksData = [
     title: "It's very nice dress",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.",
-    image: "/assets/images/CDC_1.png",
+    image: `${baseUrl}/assets/images/CDC_1.png`,
     price: 2500,
   },
   {
@@ -44,7 +46,7 @@ export const topPicksData = [
     title: "The Best of Both Worlds",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.",
-    image: "/assets/images/CDC_2.png",
+    image: `${baseUrl}/assets/images/CDC_2.png`,
     price: 3200,
   },
 ];

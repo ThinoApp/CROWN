@@ -1,8 +1,9 @@
+import { baseUrl } from "@/config";
 import "./MeetTheStylistsLeft.scss";
 const MeetTheStylistsLeft = () => {
   return (
     <div className="MeetTheStylistsLeft">
-      <img src="/assets/images/Cta-bg.png" alt="images" />
+      <img src={`${baseUrl}/assets/images/Cta-bg.png`} alt="images" />
       <h2>MEET STYLISTS</h2>
       <p>
         YOU'LL BE MATCHED WITH YOUR OWN PERSONAL STYLIST WHO WILL HAND PICK

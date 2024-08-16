@@ -3,7 +3,7 @@
 .HeroDescription {
   @include global.paddingInline();
   @apply h-screen flex flex-col items-center justify-center relative py-4 sm:flex-1;
-  background-image: url("/src/assets/images/image_2.jpg");
+  background-image: url("/CROWN/assets/images/image_2.jpg");
   background-size: cover;
   &::before {
     content: "";
