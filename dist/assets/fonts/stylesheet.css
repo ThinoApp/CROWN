@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato-Light.woff2') format('woff2'),
+        url('Lato-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CaslonGraphique';
+    src: url('CaslonGraphique-Opti.woff2') format('woff2'),
+        url('CaslonGraphique-Opti.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url('Lato-Regular.woff2') format('woff2'),
+        url('Lato-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MB Picture House One';
+    src: url('MBPictureHouseOne-Bold.woff2') format('woff2'),
+        url('MBPictureHouseOne-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CaslonGraD';
+    src: url('CaslonGraD.woff2') format('woff2'),
+        url('CaslonGraD.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'CaslonGraComD';
+    src: url('CaslonGraComD.woff2') format('woff2'),
+        url('CaslonGraComD.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MB Picture House One';
+    src: url('MBPictureHouseOne.woff2') format('woff2'),
+        url('MBPictureHouseOne.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
