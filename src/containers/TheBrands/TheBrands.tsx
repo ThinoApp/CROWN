@@ -2,15 +2,56 @@ import { ArrowLeft, ArrowRight } from "lucide-react";
 import { theBrands } from "./data/the-brands";
 import "./TheBrands.scss";
 import { useTheBrandHooks } from "./hooks/useTheBrandHooks";
+import { motion } from "framer-motion";
 const TheBrands = () => {
   const { brandlListContainerRef, scrollLeft, scrollRight } =
     useTheBrandHooks();
 
   return (
     <div className="TheBrands">
-      <h2>THE BRANDS</h2>
-      <p>WE DO COLLABORATION WITH WORLDWIDE TOP BRANDS</p>
-      <div className="TheBrands-list" ref={brandlListContainerRef}>
+      <motion.h2
+        initial={{
+          scaleX: 0,
+        }}
+        whileInView={{
+          scaleX: 1,
+        }}
+        transition={{
+          delay: 0.5,
+        }}
+        className="origin-left"
+      >
+        THE BRANDS
+      </motion.h2>
+      <motion.p
+        initial={{
+          scaleX: 0,
+        }}
+        whileInView={{
+          scaleX: 1,
+        }}
+        transition={{
+          delay: 0.5,
+        }}
+        className="origin-right"
+      >
+        WE DO COLLABORATION WITH WORLDWIDE TOP BRANDS
+      </motion.p>
+      <motion.div
+        initial={{
+          translateX: "-100%",
+          opacity: 0,
+        }}
+        whileInView={{
+          translateX: 0,
+          opacity: 1,
+        }}
+        transition={{
+          delay: 0.75,
+        }}
+        className="TheBrands-list"
+        ref={brandlListContainerRef}
+      >
         {theBrands.map((brand) => (
           <div key={brand.id} className="TheBrands-list-item">
             <img
@@ -23,15 +64,34 @@ const TheBrands = () => {
             </p>
           </div>
         ))}
-      </div>
+      </motion.div>
 
       <div className="TheBrands-control">
-        <button className="btn-left" onClick={scrollLeft}>
+        <motion.button
+          initial={{
+            scale: 0,
+          }}
+          whileInView={{
+            scale: 1,
+          }}
+          className="btn-left"
+          onClick={scrollLeft}
+        >
           <ArrowLeft size={24} />
-        </button>
-        <button className="btn-left" onClick={scrollRight}>
+        </motion.button>
+        <motion.button
+          initial={{
+            scale: 0,
+          }}
+          whileInView={{
+            scale: 1,
+          }}
+          transition={{ delay: 0.2 }}
+          className="btn-left"
+          onClick={scrollRight}
+        >
           <ArrowRight size={24} />
-        </button>
+        </motion.button>
       </div>
     </div>
   );

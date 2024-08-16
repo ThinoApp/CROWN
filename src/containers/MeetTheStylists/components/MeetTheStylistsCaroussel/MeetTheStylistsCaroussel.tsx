@@ -8,6 +8,9 @@ const MeetTheStylistsCaroussel = () => {
     <div className="MeetTheStylistsCaroussel">
       {[0, 1, 2, 3].map((item) => (
         <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2 * item }}
           className={`${
             active === item ? "pointer-events-none" : "pointer-events-auto"
           } caroussel-item ${active === item ? "z-50" : ""}`}
@@ -24,7 +27,7 @@ const MeetTheStylistsCaroussel = () => {
           onClick={() => setActive(item)}
         >
           <motion.img
-            src={`${baseUrl}/assets/images/CDC_1.png`}
+            src={`${baseUrl}/assets/images/CDC_${item + 1}.png`}
             animate={{
               boxShadow:
                 active === item

@@ -1,8 +1,22 @@
 import "./Header.scss";
 import { MenuIcon, FlameKindling } from "lucide-react";
+import { motion } from "framer-motion";
 const Header = () => {
   return (
-    <div className="Header">
+    <motion.div
+      initial={{
+        y: 100,
+        opacity: 0,
+      }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+      }}
+      transition={{
+        delay: 0.5,
+      }}
+      className="Header"
+    >
       <div className="Header-logo">
         <FlameKindling />
         <p>Crown</p>
@@ -10,7 +24,7 @@ const Header = () => {
       <button className="Header-menu">
         <MenuIcon />
       </button>
-    </div>
+    </motion.div>
   );
 };
 export default Header;
